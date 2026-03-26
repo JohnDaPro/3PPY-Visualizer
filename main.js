@@ -15,8 +15,12 @@ const songSlider    = document.getElementById('song-slider');
 // ─── File Selection ────────────────────────────────────────────────────────────
 let selectedFile = null;
 
+const SUPPORTED_EXTS = new Set(['mp3', 'wav', 'ogg', 'flac', 'aac', 'm4a']);
+
 function setFile(file) {
-    if (!file || !file.type.startsWith('audio/')) return;
+    if (!file) return;
+    const ext = file.name.split('.').pop().toLowerCase();
+    if (!SUPPORTED_EXTS.has(ext)) return;
     selectedFile = file;
     fileName.textContent = file.name;
     filePreview.classList.remove('hidden');
