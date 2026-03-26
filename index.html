@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3PPY</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+</head>
+<body>
+
+    <!-- LAUNCH SCREEN -->
+    <div id="launch-screen">
+        <div id="launch-card">
+
+            <div id="header">
+                <span id="logo">3PPY</span>
+                <span id="tagline">audio visualizer</span>
+            </div>
+
+            <div id="drop-zone" class="idle">
+                <input type="file" id="file-input" accept=".mp3,audio/*" hidden>
+                <div id="drop-inner">
+                    <svg id="drop-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4L24 32M24 4L14 14M24 4L34 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 36V42H40V36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p id="drop-label">Drop an MP3 here</p>
+                    <span id="drop-sub">or <button id="browse-btn">browse files</button></span>
+                </div>
+            </div>
+
+            <div id="file-preview" class="hidden">
+                <div id="file-info">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span id="file-name">—</span>
+                </div>
+                <button id="clear-file">✕</button>
+            </div>
+
+            <button id="start-btn" disabled>
+                <span>launch</span>
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                    <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div id="warnings">
+                <p>⚠ Contains flashing lights. Not suitable for photosensitive epilepsy.</p>
+                <p>Made by papajim.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PROGRESS SLIDER (shown during playback) -->
+    <div id="slider-wrap">
+        <input type="range" id="song-slider" min="0" max="100" value="0">
+    </div>
+
+</body>
+</html>
