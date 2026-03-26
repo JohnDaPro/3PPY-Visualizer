@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&display=swap');
 
 /* ─── Reset & Base ────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
     --bg:       #0a0a0a;
@@ -140,6 +140,13 @@ html, body {
 
 #browse-btn:hover { color: var(--text); }
 
+#drop-formats {
+    font-size: 0.68rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+}
+
 /* ─── File Preview ────────────────────────────────────────────── */
 #file-preview {
     display: flex;
@@ -253,20 +260,19 @@ html, body {
 }
 
 #song-slider::-webkit-slider-runnable-track {
-    height: 10px;
+    height: 2px;
     background: #333;
-    border-radius: 5px;
-    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.5);
+    border-radius: 1px;
 }
 
 #song-slider::-webkit-slider-thumb {
     appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
     background: var(--accent2);
-    margin-top: -7px;
+    border-radius: 50%;
+    margin-top: -5px;
     cursor: pointer;
-    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2);
 }
 
 #song-slider::-moz-range-track {

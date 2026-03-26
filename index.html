@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3PPY</title>
     <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+        }
+    }
+    </script>
     <script src="main.js" type="module"></script>
 </head>
 <body>
@@ -19,14 +27,15 @@
             </div>
 
             <div id="drop-zone" class="idle">
-                <input type="file" id="file-input" accept=".mp3,audio/*" hidden>
+                <input type="file" id="file-input" accept=".mp3,.wav,.ogg,.flac,.aac,.m4a" hidden>
                 <div id="drop-inner">
                     <svg id="drop-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 4L24 32M24 4L14 14M24 4L34 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M8 36V42H40V36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <p id="drop-label">Drop an MP3 here</p>
+                    <p id="drop-label">Drop an audio file here</p>
                     <span id="drop-sub">or <button id="browse-btn">browse files</button></span>
+                    <span id="drop-formats">mp3 · wav · ogg · flac · aac · m4a</span>
                 </div>
             </div>
 
