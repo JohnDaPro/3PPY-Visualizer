@@ -3,5 +3,5 @@
  */
 
 export default {
-    base: process.env.NODE_ENV === "production" ? '3PPY-Visualizer/' : '' 
+    base: process.env.NODE_ENV === "production" ? '/3PPY-Visualizer/' : '' 
 }
