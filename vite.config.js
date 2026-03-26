@@ -1,5 +1,8 @@
+/**
+ * type@ {import('vite)'.UserConfig}
+ */
+
 export default {
-  server: {
-    open: true
-  }
-};
+    base: process.env.NODE_ENV === "production" ? '\
+    3PPY-Visualizer/' : '' 
+}
